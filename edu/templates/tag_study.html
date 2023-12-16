@@ -22,6 +22,15 @@
         <a href="{% url 'edu:new_content' %}">새글등록</a>
     </p>
 
+    <ul>
+        {% for feed in feed_list%}
+            <li>
+                {{feed.content}}
+                <img src="/media/{{feed.photo}}" width="100px"/>
+            </li>
+        {% endfor %}
+    </ul>
+
     <p>
         <a href="https://programmers.co.kr/">
             프로그래머스
